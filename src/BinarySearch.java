@@ -15,19 +15,17 @@ public class BinarySearch {
         {
             int mid = comeco + ((fim - comeco) / 2);
 
-            if (arr[mid] == alvo) // se o valor do meio foi o alvo encontramos
-            {
-                return mid;
-            }
-
             if (alvo < arr[mid]) // o alvo está a esquerda da array?
             {
-                // direciona o fim para a esquerda da array
                 fim = mid - 1;
-            } else // o alvo então está na direita array
+            } 
+            else if (arr[mid] < alvo) // o alvo então está na direita array?
             {
-                // direciona o inicio para a direita da array
                 comeco = mid + 1;
+            } 
+            else // então esse é o valor que queremos
+            {
+                return mid;
             }
         }
         return -1;
