@@ -1,12 +1,17 @@
 public class Ceiling {
     public static void main(String[] args) {
         int[] arryOrdenada = { 2, 4, 6, 9, 11, 12, 14, 20, 36, 48 };
-        System.out.println(findCeiling(arryOrdenada, 25));
+        System.out.println(findCeiling(arryOrdenada, 49));
     }
 
     static int findCeiling(int[] arr, int alvo) {
         int comeco = 0;
         int fim = arr.length - 1;
+
+        //se não existir um número maior ou igual ao alvo retornar max value
+        if (arr[arr.length - 1] < alvo) {
+            return Integer.MAX_VALUE;
+        }
 
         // checar se a array é ascendente ou descendente
         boolean isAsc;

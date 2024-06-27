@@ -1,12 +1,17 @@
 public class Floor {
     public static void main(String[] args) {
         int[] arryOrdenada = { 2, 4, 6, 9, 11, 12, 14, 20, 36, 48 };
-        System.out.println(findCeiling(arryOrdenada, 21));
+        System.out.println(findCeiling(arryOrdenada, 1));
     }
 
     static int findCeiling(int[] arr, int alvo) {
         int comeco = 0;
         int fim = arr.length - 1;
+
+        // se não existir um número menor ou igual ao alvo retornar min value
+        if (alvo < arr[0]) {
+            return Integer.MIN_VALUE;
+        }
 
         // checar se a array é ascendente ou descendente
         boolean isAsc;
