@@ -1,11 +1,11 @@
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arryOrdenada = { 2, 4, 6, 9, 11, 12, 14, 20, 36, 48 };
-        int[] arryInversa = { 90, 75, 18, 126, 4, 3, 1 };
-        int numero = 1;
+        int[] arryOrdenada = { 5, 7, 10, 10, 10, 11  };
+        int[] arryOrdenada2 = { 5, 7, 10, 10, 11  };
+        int numero = 10;
 
-        System.out.println(buscaBinaria(arryInversa, numero));
         System.out.println(buscaBinaria(arryOrdenada, numero));
+        System.out.println(buscaBinaria(arryOrdenada2, numero));
     }
 
     static int buscaBinaria(int[] arr, int alvo) {
